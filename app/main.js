@@ -98,7 +98,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                     statisticType: "sum"
                                 })
                             ];
-                            query.groupByFieldsForStatistics = ["YEAR + '-' + MonthName"];
+                            query.groupByFieldsForStatistics = ["YearString"];
                             query.geometry = geometry;
                             query.distance = distance;
                             query.units = units;
@@ -109,9 +109,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             responseChartData = queryResponse.features.map(function (feature) {
                                 var timeSpan = feature.attributes["EXPR_1"].split("-");
                                 var year = timeSpan[0];
-                                var month = timeSpan[1];
                                 return {
-                                    month: month,
                                     year: year,
                                     value: feature.attributes.value
                                 };
@@ -135,16 +133,14 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                     statisticType: "sum"
                                 })
                             ];
-                            query.groupByFieldsForStatistics = ["YEAR + '-' + MonthName"];
+                            query.groupByFieldsForStatistics = ["YearString"];
                             return [4 /*yield*/, layer.queryFeatures(query)];
                         case 1:
                             queryResponse = _a.sent();
                             responseChartData = queryResponse.features.map(function (feature) {
                                 var timeSpan = feature.attributes["EXPR_1"].split("-");
                                 var year = timeSpan[0];
-                                var month = timeSpan[1];
                                 return {
-                                    month: month,
                                     year: year,
                                     value: feature.attributes.value
                                 };
@@ -156,16 +152,13 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
         }
         function createDataObjects(data) {
             var formattedChartData = [];
-            constants_1.months.forEach(function (month, s) {
-                constants_1.years.forEach(function (year, t) {
-                    var matches = data.filter(function (datum) {
-                        return datum.year === year && datum.month === month;
-                    });
-                    formattedChartData.push({
-                        col: t,
-                        row: s,
-                        value: matches.length > 0 ? matches[0].value : 0
-                    });
+            constants_1.years.forEach(function (year, s) {
+                var matches = data.filter(function (datum) {
+                    return datum.year === year
+                });
+                formattedChartData.push({
+                    row: s,
+                    value: matches.length > 0 ? matches[0].value : 0
                 });
             });
             return formattedChartData;
@@ -185,14 +178,14 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                 case 0:
                     layer = new FeatureLayer({
                         portalItem: {
-                            id: "3a8aae65f6d64c9dacce3049ebe32f0c"
+                            id: "c1c22edd96a4477ba505e222e176ba80"
                         },
-                        outFields: ["MonthName", "YEAR"]
+                        outFields: ["YearString"]
                     });
                     districtsLayer = new FeatureLayer({
                         title: "districts",
                         portalItem: {
-                            id: "3a8aae65f6d64c9dacce3049ebe32f0c"
+                            id: "c1c22edd96a4477ba505e222e176ba80"
                         },
                         popupTemplate: null,
                         opacity: 0,
