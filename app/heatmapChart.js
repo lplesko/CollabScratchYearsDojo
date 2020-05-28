@@ -7,8 +7,8 @@ define(["require", "exports", "esri/views/layers/support/FeatureFilter", "esri/C
     var data = [];
     var start = new Color("#FCFBFD");
     var end = new Color("#3F007D");
-    var numCols = 1;
-    var numRows = 4;
+    var numCols = 4;
+    var numRows = 12;
     function normalize(value, minValue, maxValue) {
         return (value - minValue) / (maxValue - minValue);
     }
@@ -99,10 +99,11 @@ define(["require", "exports", "esri/views/layers/support/FeatureFilter", "esri/C
     // }
     function onCellSelect(cell) {
         var year = constants_1.years[cell.col];
+        var month = constants_1.months[cell.row];
         if (mousemoveEnabled) {
             highlighted = { col: cell.col, row: cell.row };
             layerView.filter = new FeatureFilter({
-                where: "YearString = '" + year + "'"
+                where: "Year = '" + year + "' AND MonthName = '" + month + "'"
             });
         }
         updateGrid();
