@@ -93,12 +93,12 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             query = layerView.layer.createQuery();
                             query.outStatistics = [
                                 new StatisticDefinition({
-                                    onStatisticField: "Total_visits",
+                                    onStatisticField: "UniqueIndividuals_cnt",
                                     outStatisticFieldName: "value",
                                     statisticType: "sum"
                                 })
                             ];
-                            query.groupByFieldsForStatistics = ["YEAR + '-' + MonthName"];
+                            query.groupByFieldsForStatistics = ["YearString"];
                             query.geometry = geometry;
                             query.distance = distance;
                             query.units = units;
@@ -130,12 +130,12 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             query = layer.createQuery();
                             query.outStatistics = [
                                 new StatisticDefinition({
-                                    onStatisticField: "Total_visits",
+                                    onStatisticField: "UniqueIndividuals_cnt",
                                     outStatisticFieldName: "value",
                                     statisticType: "sum"
                                 })
                             ];
-                            query.groupByFieldsForStatistics = ["YEAR + '-' + MonthName"];
+                            query.groupByFieldsForStatistics = ["YearString"];
                             return [4 /*yield*/, layer.queryFeatures(query)];
                         case 1:
                             queryResponse = _a.sent();
@@ -185,14 +185,14 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                 case 0:
                     layer = new FeatureLayer({
                         portalItem: {
-                            id: "3a8aae65f6d64c9dacce3049ebe32f0c"
+                            id: "c1c22edd96a4477ba505e222e176ba80"
                         },
-                        outFields: ["MonthName", "YEAR"]
+                        outFields: ["YearString"]
                     });
                     districtsLayer = new FeatureLayer({
                         title: "districts",
                         portalItem: {
-                            id: "3a8aae65f6d64c9dacce3049ebe32f0c"
+                            id: "c1c22edd96a4477ba505e222e176ba80"
                         },
                         popupTemplate: null,
                         opacity: 0,
