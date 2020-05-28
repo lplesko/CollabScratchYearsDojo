@@ -12,21 +12,21 @@ import { SimpleRenderer } from "esri/renderers";
 import { updateGrid } from "./heatmapChart";
 
 import Expand = require("esri/widgets/Expand");
-import { years } from "./constants";
+import { months, years } from "./constants";
 
 ( async () => {
 
   const layer = new FeatureLayer({
     portalItem: {
-      id: "c1c22edd96a4477ba505e222e176ba80"
+      id: "3a8aae65f6d64c9dacce3049ebe32f0c"
     },
-    outFields: [ "YearString" ]
+    outFields: [ "MonthName", "Year" ]
   });
 
   const districtsLayer = new FeatureLayer({
     title: "districts",
     portalItem: {
-      id: "c1c22edd96a4477ba505e222e176ba80"
+      id: "3a8aae65f6d64c9dacce3049ebe32f0c"
     },
     popupTemplate: null,
     opacity: 0,
@@ -40,7 +40,7 @@ import { years } from "./constants";
 
   const map = new EsriMap({
     basemap: "gray-vector",
-    layers: [ layer ]
+    layers: [ layer, districtsLayer ]
   });
 
   const view = new MapView({
@@ -135,7 +135,7 @@ import { years } from "./constants";
         statisticType: "sum"
       })
     ];
-    query.groupByFieldsForStatistics = [ "YearString" ];
+    query.groupByFieldsForStatistics = [ "Year + '-' + MonthName" ];
     query.geometry = geometry;
     query.distance = distance;
     query.units = units;
@@ -146,7 +146,9 @@ import { years } from "./constants";
     const responseChartData = queryResponse.features.map( feature => {
       const timeSpan = feature.attributes["EXPR_1"].split("-");
       const year = timeSpan[0];
+      const month = timeSpan[1];
       return {
+        month,
         year, 
         value: feature.attributes.value
       };
@@ -163,14 +165,16 @@ import { years } from "./constants";
         statisticType: "sum"
       })
     ];
-    query.groupByFieldsForStatistics = [ "YearString" ];
+    query.groupByFieldsForStatistics = [ "Year + '-' + MonthName" ];
 
     const queryResponse = await layer.queryFeatures(query);
 
     const responseChartData = queryResponse.features.map( feature => {
       const timeSpan = feature.attributes["EXPR_1"].split("-");
       const year = timeSpan[0];
+      const month = timeSpan[1];
       return {
+        month,
         year, 
         value: feature.attributes.value
       };
@@ -181,19 +185,21 @@ import { years } from "./constants";
   function createDataObjects(data: StatisticsResponse[]): ChartData[] {
     let formattedChartData: ChartData[] = [];
 
-    years.forEach( (year, s) => {
+    months.forEach( (month, s) => {
+      years.forEach( (year, t) => {
 
-      const matches = data.filter( datum => {
-        return datum.year === year;
+        const matches = data.filter( datum => {
+          return datum.year === year && datum.month === month;
+        });
+
+        formattedChartData.push({
+          col: t,
+          row: s,
+          value: matches.length > 0 ? matches[0].value : 0
+        });
+
       });
-
-      formattedChartData.push({
-        row: s,
-        value: matches.length > 0 ? matches[0].value : 0
-      });
-
     });
-
 
     return formattedChartData;
   }
