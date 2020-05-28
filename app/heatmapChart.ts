@@ -131,7 +131,7 @@ function onCellSelect(cell:CellHighlight) {
   if(mousemoveEnabled){
     highlighted = { col: cell.col, row: cell.row };
     layerView.filter = new FeatureFilter({
-      where: `Year = '${year}'`
+      where: `YearString = '${year}'`
     });
   }
   updateGrid();
