@@ -12,8 +12,8 @@ let data: ChartData[] = [];
 
 const start = new Color("#FCFBFD");
 const end = new Color("#3F007D");
-const numCols = 1;
-const numRows = 4;
+const numCols = 4;
+const numRows = 12;
 
 function normalize(value:number, minValue:number, maxValue:number) {
   return (value - minValue) / (maxValue - minValue);
@@ -131,7 +131,7 @@ function onCellSelect(cell:CellHighlight) {
   if(mousemoveEnabled){
     highlighted = { col: cell.col, row: cell.row };
     layerView.filter = new FeatureFilter({
-      where: `YearString = '${year}'`
+      where: `Year = '${year}' AND MonthName = '${month}'`
     });
   }
   updateGrid();
