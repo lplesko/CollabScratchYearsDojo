@@ -23,7 +23,7 @@ body, #viewDiv {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 60px 70px 70px 70px;
+  grid-template-columns: 60px 70px;
   grid-template-rows: 40px 50px 50px 50px 50px;
   grid-template-areas: ". col1" "row-label1 canvas" "row-label2 canvas" "row3 canvas" "row4 canvas";
 
