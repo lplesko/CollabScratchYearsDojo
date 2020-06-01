@@ -111,8 +111,8 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 var year = timeSpan[0];
                                 var dummy = timeSpan[1];
                                 return {
-                                    dummy: dummy,
                                     year: year,
+                                    dummy: dummy,
                                     value: feature.attributes.value
                                 };
                             });
@@ -144,8 +144,8 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 var year = timeSpan[0];
                                 var dummy = timeSpan[1];
                                 return {
-                                    dummy: dummy,
                                     year: year,
+                                    dummy: dummy,
                                     value: feature.attributes.value
                                 };
                             });
