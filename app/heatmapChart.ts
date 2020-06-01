@@ -1,7 +1,7 @@
 import esri = __esri;
 import FeatureFilter = require("esri/views/layers/support/FeatureFilter");
 import Color = require("esri/Color");
-import { years, months } from "./constants";
+import { years, dummys } from "./constants";
 
 let mousemoveEnabled = true;
 
@@ -131,7 +131,7 @@ function onCellSelect(cell:CellHighlight) {
   if(mousemoveEnabled){
     highlighted = { col: cell.col, row: cell.row };
     layerView.filter = new FeatureFilter({
-      where: `YearString = '${year}'`
+      where: `YearString = '${year}' AND Dummy = '${dummy}'`
     });
   }
   updateGrid();
