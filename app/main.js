@@ -93,12 +93,12 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             query = layerView.layer.createQuery();
                             query.outStatistics = [
                                 new StatisticDefinition({
-                                    onStatisticField: "UniqueIndividuals_cnt",
+                                    onStatisticField: "Total_visits",
                                     outStatisticFieldName: "value",
                                     statisticType: "sum"
                                 })
                             ];
-                            query.groupByFieldsForStatistics = ["YearString" + '-' + "Dummy"];
+                            query.groupByFieldsForStatistics = ["YEAR + '-' + MonthName"];
                             query.geometry = geometry;
                             query.distance = distance;
                             query.units = units;
@@ -109,10 +109,10 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             responseChartData = queryResponse.features.map(function (feature) {
                                 var timeSpan = feature.attributes["EXPR_1"].split("-");
                                 var year = timeSpan[0];
-                                var dummy = timeSpan[1];
+                                var month = timeSpan[1];
                                 return {
+                                    month: month,
                                     year: year,
-                                    dummy: dummy,
                                     value: feature.attributes.value
                                 };
                             });
@@ -130,22 +130,22 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             query = layer.createQuery();
                             query.outStatistics = [
                                 new StatisticDefinition({
-                                    onStatisticField: "UniqueIndividuals_cnt",
+                                    onStatisticField: "Total_visits",
                                     outStatisticFieldName: "value",
                                     statisticType: "sum"
                                 })
                             ];
-                            query.groupByFieldsForStatistics = ["YearString" + '-' + "Dummy"];
+                            query.groupByFieldsForStatistics = ["YEAR + '-' + MonthName"];
                             return [4 /*yield*/, layer.queryFeatures(query)];
                         case 1:
                             queryResponse = _a.sent();
                             responseChartData = queryResponse.features.map(function (feature) {
                                 var timeSpan = feature.attributes["EXPR_1"].split("-");
                                 var year = timeSpan[0];
-                                var dummy = timeSpan[1];
+                                var month = timeSpan[1];
                                 return {
+                                    month: month,
                                     year: year,
-                                    dummy: dummy,
                                     value: feature.attributes.value
                                 };
                             });
@@ -156,10 +156,10 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
         }
         function createDataObjects(data) {
             var formattedChartData = [];
-            constants_1.years.forEach(function (year, s) {
-                constants_1.dummys.forEach(function (dummy, t) {
+            constants_1.months.forEach(function (month, s) {
+                constants_1.years.forEach(function (year, t) {
                     var matches = data.filter(function (datum) {
-                        return datum.year === year && datum.dummy === dummy;
+                        return datum.year === year && datum.month === month;
                     });
                     formattedChartData.push({
                         col: t,
@@ -185,14 +185,14 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                 case 0:
                     layer = new FeatureLayer({
                         portalItem: {
-                            id: "c1c22edd96a4477ba505e222e176ba80"
+                            id: "3a8aae65f6d64c9dacce3049ebe32f0c"
                         },
-                        outFields: ["YearString", "Dummy"]
+                        outFields: ["MonthName", "YEAR"]
                     });
                     districtsLayer = new FeatureLayer({
                         title: "districts",
                         portalItem: {
-                            id: "c1c22edd96a4477ba505e222e176ba80"
+                            id: "3a8aae65f6d64c9dacce3049ebe32f0c"
                         },
                         popupTemplate: null,
                         opacity: 0,
