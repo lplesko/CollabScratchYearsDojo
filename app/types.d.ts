@@ -5,12 +5,12 @@ interface StatisticsResponse {
  } 
   
 interface ChartData {
-  row: number,
   col: number,
+  row: number,
   value: string
 }
 
 interface CellHighlight {
-  row: number,
-  col: number
+  col: number,
+  row: number
 }
