@@ -1,7 +1,7 @@
 interface StatisticsResponse {
    dummy: "1" | string,
    year: "2016" | "2017" | "2018" | "2019" | string,
-   value: string
+   value: number
  } 
   
 interface ChartData {
