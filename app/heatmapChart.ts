@@ -1,7 +1,7 @@
 import esri = __esri;
 import FeatureFilter = require("esri/views/layers/support/FeatureFilter");
 import Color = require("esri/Color");
-import { years, dummys } from "./constants";
+import { years, months } from "./constants";
 
 let mousemoveEnabled = true;
 
@@ -12,8 +12,8 @@ let data: ChartData[] = [];
 
 const start = new Color("#FCFBFD");
 const end = new Color("#3F007D");
-const numCols = 1;
-const numRows = 4;
+const numCols = 4;
+const numRows = 12;
 
 function normalize(value:number, minValue:number, maxValue:number) {
   return (value - minValue) / (maxValue - minValue);
@@ -125,13 +125,13 @@ function addCanvasListeners() {
 
 function onCellSelect(cell:CellHighlight) {
   
-  const year = years[cell.row];
-  const dummy = dummys[cell.col];
+  const year = years[cell.col];
+  const month = months[cell.row];
 
   if(mousemoveEnabled){
     highlighted = { col: cell.col, row: cell.row };
     layerView.filter = new FeatureFilter({
-      where: `YearString = '${year}' AND Dummy = '${dummy}'`
+      where: `Year = '${year}' AND MonthName = '${month}'`
     });
   }
   updateGrid();
