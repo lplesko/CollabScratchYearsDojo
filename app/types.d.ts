@@ -7,7 +7,7 @@ interface StatisticsResponse {
 interface ChartData {
   col: number,
   row: number,
-  value: string
+  value: number
 }
 
 interface CellHighlight {
