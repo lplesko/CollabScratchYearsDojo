@@ -152,7 +152,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
         }
         function createDataObjects(data) {
             var formattedChartData = [];
-            constants_1.years.forEach(function (year, ) {
+            constants_1.years.forEach(function (year, s) {
                 var matches = data.filter(function (datum) {
                     return datum.year === year;
                 });
