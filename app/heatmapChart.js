@@ -99,7 +99,7 @@ define(["require", "exports", "esri/views/layers/support/FeatureFilter", "esri/C
     // }
     function onCellSelect(cell) {
         var year = constants_1.years[cell.row];
-        var blank = constants_1.blankcols[cell.col];
+        var dummy = constants_1.dummys[cell.col];
         if (mousemoveEnabled) {
             highlighted = { col: cell.col, row: cell.row };
             layerView.filter = new FeatureFilter({
