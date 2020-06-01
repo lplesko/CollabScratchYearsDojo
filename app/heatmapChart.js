@@ -103,7 +103,7 @@ define(["require", "exports", "esri/views/layers/support/FeatureFilter", "esri/C
         if (mousemoveEnabled) {
             highlighted = { col: cell.col, row: cell.row };
             layerView.filter = new FeatureFilter({
-                where: "YearString = '" + year + "'"
+                where: "YearString = '" + year + "' AND Dummy = '" + dummy + "'"
             });
         }
         updateGrid();
