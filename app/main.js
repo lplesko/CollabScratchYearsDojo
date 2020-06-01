@@ -53,7 +53,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             return [4 /*yield*/, view.hitTest(event)];
                         case 1:
                             hitResponse = _a.sent();
-                            hitResults = hitResponse.results.filter(function (hit) { return hit.graphic.layer === layer; });
+                            hitResults = hitResponse.results.filter(function (hit) { return hit.graphic.layer === districtsLayer; });
                             if (!(hitResults.length > 0)) return [3 /*break*/, 3];
                             graphic = hitResults[0].graphic;
                             if (!(previousId !== graphic.attributes.FID)) return [3 /*break*/, 3];
@@ -62,7 +62,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 highlight.remove();
                                 highlight = null;
                             }
-                            highlight = layerView.highlight([previousId]);
+                            highlight = districtsLayerView.highlight([previousId]);
                             geometry = graphic && graphic.geometry;
                             queryOptions = {
                                 geometry: geometry,
@@ -98,7 +98,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                     statisticType: "sum"
                                 })
                             ];
-                            query.groupByFieldsForStatistics = ["YearString"];
+                            query.groupByFieldsForStatistics = ["YearString" + '-' + "Dummy"];
                             query.geometry = geometry;
                             query.distance = distance;
                             query.units = units;
@@ -109,8 +109,10 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             responseChartData = queryResponse.features.map(function (feature) {
                                 var timeSpan = feature.attributes["EXPR_1"].split("-");
                                 var year = timeSpan[0];
+                                var dummy = timeSpan[1];
                                 return {
                                     year: year,
+                                    dummy: dummy,
                                     value: feature.attributes.value
                                 };
                             });
@@ -133,15 +135,17 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                     statisticType: "sum"
                                 })
                             ];
-                            query.groupByFieldsForStatistics = ["YearString"];
+                            query.groupByFieldsForStatistics = ["YearString" + '-' + "Dummy"];
                             return [4 /*yield*/, layer.queryFeatures(query)];
                         case 1:
                             queryResponse = _a.sent();
                             responseChartData = queryResponse.features.map(function (feature) {
                                 var timeSpan = feature.attributes["EXPR_1"].split("-");
                                 var year = timeSpan[0];
+                                var dummy = timeSpan[1];
                                 return {
                                     year: year,
+                                    dummy: dummy,
                                     value: feature.attributes.value
                                 };
                             });
@@ -153,9 +157,9 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
         function createDataObjects(data) {
             var formattedChartData = [];
             constants_1.years.forEach(function (year, s) {
-                constants_1.blankcols.forEach(function (blank, t) {
+                constants_1.dummys.forEach(function (blank, t) {
                     var matches = data.filter(function (datum) {
-                        return datum.year === year && datum.blank === blank;
+                        return datum.year === year && datum.dummy === dummy;
                     });
                     formattedChartData.push({
                         col: t,
@@ -202,7 +206,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                     
                     map = new EsriMap({
                         basemap: "gray-vector",
-                        layers: [layer]
+                        layers: [layer, districtsLayer]
                     });
 
                     view = new MapView({
@@ -230,9 +234,9 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                     return [4 /*yield*/, view.whenLayerView(layer)];
                 case 2:
                     layerView = _a.sent();
-                    return[4 /*yield*/, view.whenLayerView(layer)];
+                    return[4 /*yield*/, view.whenLayerView(districtsLayer)];
                 case 3:
-                    layerView = _a.sent();
+                    districtsLayerView = _a.sent();
                     return [4 /*yield*/, queryLayerStatistics(layer)];
                 case 4:
                     layerStats = _a.sent();
