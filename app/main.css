@@ -23,9 +23,9 @@ body, #viewDiv {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 60px 70px;
-  grid-template-rows: 40px 50px 50px 50px 50px;
-  grid-template-areas: ". col1" "row-label1 canvas" "row-label2 canvas" "row3 canvas" "row4 canvas";
+  grid-template-columns: 60px 70px 70px 70px 70px;
+  grid-template-rows: 40px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-areas: ". col1 col2 col3 col4" "row-label1 canvas canvas canvas canvas" "row-label2 canvas canvas canvas canvas " "row3 canvas canvas canvas canvas" "row4 canvas canvas canvas canvas" "row5 canvas canvas canvas canvas" "row6 canvas canvas canvas canvas" "row7 canvas canvas canvas canvas" "row8 canvas canvas canvas canvas" "row9 canvas canvas canvas canvas" "row10 canvas canvas canvas canvas" "row11 canvas canvas canvas canvas" "row12 canvas canvas canvas canvas";
 
   justify-items: stretch;
   align-items: stretch;
@@ -46,10 +46,20 @@ body, #viewDiv {
 }
 .col1 { grid-area: col1; }
 .col2 { grid-area: col2; }
+.col3 { grid-area: col3; }
+.col4 { grid-area: col4; }
 .row-label1 { grid-area: row-label1; }
 .row-label2 { grid-area: row-label2; }
 .row3 { grid-area: row3; }
 .row4 { grid-area: row4; }
+.row5 { grid-area: row5; }
+.row6 { grid-area: row6; }
+.row7 { grid-area: row7; }
+.row8 { grid-area: row8; }
+.row9 { grid-area: row9; }
+.row10 { grid-area: row10; }
+.row11 { grid-area: row11; }
+.row12 { grid-area: row12; }
 
 #titleDiv {
  padding: 10px;
