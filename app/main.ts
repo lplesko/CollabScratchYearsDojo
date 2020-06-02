@@ -130,7 +130,7 @@ import { dummies, years } from "./constants";
 
     query.outStatistics = [
       new StatisticDefinition({
-        onStatisticField: "UniqueIndividuals_cnt",
+        onStatisticField: "Total_visits",
         outStatisticFieldName: "value",
         statisticType: "sum"
       })
@@ -160,7 +160,7 @@ import { dummies, years } from "./constants";
     const query = layer.createQuery();
     query.outStatistics = [
       new StatisticDefinition({
-        onStatisticField: "UniqueIndividuals_cnt",
+        onStatisticField: "Total_visits",
         outStatisticFieldName: "value",
         statisticType: "sum"
       })
