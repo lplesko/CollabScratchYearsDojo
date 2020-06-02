@@ -47,7 +47,7 @@ import { dummies, years } from "./constants";
     map: map,
     container: "viewDiv",
     center: [ -85, 50 ],
-    zoom: 4,
+    zoom: 4.5,
     highlightOptions: {
       color: "#262626",
       haloOpacity: 1,
