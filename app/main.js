@@ -66,7 +66,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             geometry = graphic && graphic.geometry;
                             queryOptions = {
                                 geometry: geometry,
-                                spatialRelationship: "intersects"
+                                spatialRelationship: "contains"
                             };
                             filterOptions = new FeatureFilter(queryOptions);
                             layerView.effect = new FeatureEffect({
