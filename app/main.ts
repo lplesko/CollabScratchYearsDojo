@@ -101,7 +101,7 @@ import { dummies, years } from "./constants";
         const geometry = graphic && graphic.geometry;
         let queryOptions = {
           geometry,
-          spatialRelationship: "contains"
+          spatialRelationship: "intersects"
         };
 
         const filterOptions = new FeatureFilter(queryOptions);
