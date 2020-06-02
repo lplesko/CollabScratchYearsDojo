@@ -18,7 +18,7 @@ import { dummies, years } from "./constants";
 
   const layer = new FeatureLayer({
     portalItem: {
-      id: "c1c22edd96a4477ba505e222e176ba80"
+      id: "38c403f3896f427cb491168958162f16"
     },
     outFields: [ "Dummy", "YearString" ]
   });
@@ -26,7 +26,7 @@ import { dummies, years } from "./constants";
   const districtsLayer = new FeatureLayer({
     title: "districts",
     portalItem: {
-      id: "c1c22edd96a4477ba505e222e176ba80"
+      id: "38c403f3896f427cb491168958162f16"
     },
     popupTemplate: null,
     opacity: 0,
