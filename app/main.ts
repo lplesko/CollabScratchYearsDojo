@@ -63,7 +63,6 @@ import { dummies, years } from "./constants";
     group: "top-left"
   });
   view.ui.add(chartExpand, "top-left");
-  view.ui.add("titleDiv", "top-right");
 
   const layerView = await view.whenLayerView(layer) as esri.FeatureLayerView;
   const districtsLayerView = await view.whenLayerView(districtsLayer) as esri.FeatureLayerView;
