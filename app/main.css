@@ -50,6 +50,11 @@ body, #viewDiv {
 .row3 { grid-area: row3; }
 .row4 { grid-area: row4; }
 
+#logoDiv {
+  padding: 10px;
+  width: 224px;
+}
+
 #dataDescription {
   font-size: 12pt;
   padding: 10px 5px 0px 5px;
