@@ -95,7 +95,9 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 new StatisticDefinition({
                                     onStatisticField: "Total_visits",
                                     outStatisticFieldName: "value",
-                                    statisticType: "sum"
+                                    statisticType: "sum",
+                                    format: {
+                                        digitSeparator: true}
                                 })
                             ];
                             query.groupByFieldsForStatistics = ["YearString + '-' + Dummy"];
@@ -132,7 +134,9 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 new StatisticDefinition({
                                     onStatisticField: "Total_visits",
                                     outStatisticFieldName: "value",
-                                    statisticType: "sum"
+                                    statisticType: "sum",
+                                    format: {
+                                        digitSeparator: true}
                                 })
                             ];
                             query.groupByFieldsForStatistics = ["YearString + '-' + Dummy"];
