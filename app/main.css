@@ -12,6 +12,8 @@ body, #viewDiv {
 }
 
 #resetBtn {
+  background-color: rgba(50,50,50,0.9);
+  color: white;
   float: right;
   cursor: pointer;
   width: 100%;
@@ -62,8 +64,6 @@ body, #viewDiv {
 
 .esri-widget--button {
   font-size: 14px;
-  background-color: rgba(50,50,50,0.9);
-  color: white;
   width: 32px;
   height: 32px;
   padding: 0;
