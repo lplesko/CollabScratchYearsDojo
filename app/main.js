@@ -280,7 +280,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                     });
                     
                     map = new EsriMap({
-                        basemap: "world_light_gray_base",
+                        basemap: "gray-vector-base",
                         layers: [layer, districtsLayer]
                     });
 
