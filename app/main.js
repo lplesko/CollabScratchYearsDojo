@@ -298,6 +298,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                     });
                     view.ui.add(chartExpand, "top-left");
                     view.ui.add("logoDiv", "bottom-left");
+                    view.ui.add("legendDiv", "bottom-right");
                     return [4 /*yield*/, view.whenLayerView(layer)];
                 case 2:
                     layerView = _a.sent();
