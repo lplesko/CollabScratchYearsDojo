@@ -54,7 +54,7 @@ import { dummies, years } from "./constants";
               fieldName: "Total_visits",
               label: "Total visits to a food bank",
               format: {
-                  digitSeparator: true.
+                  digitSeparator: true,
                   places: 0
               }
             },
