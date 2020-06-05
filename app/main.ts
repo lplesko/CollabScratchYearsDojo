@@ -51,6 +51,14 @@ import { dummies, years } from "./constants";
               }
             },
             {
+              fieldName: "Total_visits",
+              label: "Total visits to a food bank",
+              format: {
+                  digitSeparator: true.
+                  places: 0
+              }
+            },
+            {
               fieldName: "UniqueIndividuals_cnt",
               label: "Total unique visits",
               format: {
