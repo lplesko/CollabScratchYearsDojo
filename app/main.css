@@ -63,13 +63,6 @@ body, #viewDiv {
   width: 224px;
 }
 
-#infoDiv{
-  background-color: white;
-  padding: 10px;
-  max-height: 300px;
-  overflow: auto;
-}
-
 #dataDescription {
   font-size: 12pt;
   padding: 10px 5px 0px 5px;
