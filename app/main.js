@@ -33,7 +33,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/widgets/Legend", "esri/layers/FeatureLayer", "esri/views/layers/support/FeatureFilter", "esri/views/layers/support/FeatureEffect", "esri/tasks/support/StatisticDefinition", "esri/symbols", "esri/renderers", "./heatmapChart", "esri/widgets/Expand", "./constants"], function (require, exports, EsriMap, MapView, FeatureLayer, FeatureFilter, FeatureEffect, StatisticDefinition, symbols_1, renderers_1, heatmapChart_1, Expand, constants_1) {
+define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer", "esri/views/layers/support/FeatureFilter", "esri/views/layers/support/FeatureEffect", "esri/tasks/support/StatisticDefinition", "esri/symbols", "esri/renderers", "./heatmapChart", "esri/widgets/Expand", "./constants"], function (require, exports, EsriMap, MapView, FeatureLayer, FeatureFilter, FeatureEffect, StatisticDefinition, symbols_1, renderers_1, heatmapChart_1, Expand, constants_1) {
     "use strict";
     var _this = this;
     Object.defineProperty(exports, "__esModule", { value: true });
@@ -179,7 +179,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/widgets/Le
             }
             heatmapChart_1.updateGrid(layerStats, layerView, true);
         }
-        var layer, districtsLayer, map, mapList, view, legend, chartExpand, layerView, districtsLayerView, layerStats, highlight, previousId, resetBtn;
+        var layer, districtsLayer, map, mapList, view, chartExpand, layerView, districtsLayerView, layerStats, highlight, previousId, resetBtn;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -287,16 +287,6 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/widgets/Le
                             fillOpacity: 0
                         }
                     });
-                    legend = new Legend({
-                        view: view,
-                        layerInfos: [
-                          {
-                            layer: layer,
-                            title: "Food Bank Usage"
-                          }
-                        ]
-                    });
-
                     return [4 /*yield*/, view.when()];
                 case 1:
                     _a.sent();
@@ -308,7 +298,6 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/widgets/Le
                     });
                     view.ui.add(chartExpand, "top-left");
                     view.ui.add("logoDiv", "bottom-left");
-                    view.ui.add(legend, "bottom-right");
                     return [4 /*yield*/, view.whenLayerView(layer)];
                 case 2:
                     layerView = _a.sent();
