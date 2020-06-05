@@ -219,7 +219,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                     fieldName: "Total_visits",
                                     label: "Total visits to a food bank",
                                     format: {
-                                        digitSeparator: true.
+                                        digitSeparator: true,
                                         places: 0
                                     }
                                   },
