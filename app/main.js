@@ -288,7 +288,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                         map: map,
                         container: "viewDiv",
                         center: [-87, 50],
-                        zoom: 4.5,
+                        zoom: 5,
                         highlightOptions: {
                             color: "#00e6e6",
                             haloOpacity: 1,
