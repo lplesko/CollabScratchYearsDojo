@@ -197,72 +197,6 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 expression: "Round((($feature.UniqueIndividuals_perc)*10),1)"
                               }
                             ],
-                            
-                            content:[
-                              {
-                                type: "text",
-                                text:
-                                  "In this electoral riding, {expression/1in1000} out of 1000 people accessed a food bank this year."
-                              },
-                              {
-                                type: "fields",
-                                fieldInfos: [
-                                  {
-                                    fieldName: "Pop2016",
-                                    label: "Total Population (2016)",
-                                    format: {
-                                      digitSeparator: true,
-                                      places: 0
-                                    }
-                                  },
-                                  {
-                                    fieldName: "Total_visits",
-                                    label: "Total visits to a food bank",
-                                    format: {
-                                        digitSeparator: true,
-                                        places: 0
-                                    }
-                                  },
-                                  {
-                                    fieldName: "UniqueIndividuals_cnt",
-                                    label: "Total unique visits",
-                                    format: {
-                                      digitSeparator: true,
-                                      places: 0
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                type: "media", //MediaContentElement for chart
-                                mediaInfos: [
-                                  {
-                                    title: "<b>Housing</b>",
-                                    type: "pie-chart",
-                                    caption: "",
-                                    value: {
-                                      fields: ["Band_Owned", "Emergency_Shelter", "On_the_Street", "Rooming_House", "Own_Home", "Private_Rental", "Social_Housing", "Family_or_Friends", "Youth_Home_Shelter", "Unknown_Housing"],
-                                      normalizeField: null
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                type: "media",
-                                mediaInfos: [
-                                  {
-                                    title: "<b>Primary Source of Income</b>",
-                                    type: "pie-chart",
-                                    caption: "",
-                                    value: {
-                                      fields: ["Canada_Child_Benefit", "Disability_Benefits", "Employment", "Employment_Insurance", "No_Income", "Pension", "Provincial_Disability", "Social_Assistance", "Student_Loan", "Unknown_Income"],
-                                      normalizeField: null
-                                    }
-                                  }
-                                ]
-                              }     
-                            ],
-                            
                             fieldInfos: [
                               //the following sets will ensure that the income and housing field names appear as their designated LABEL in pie chart
                               {
@@ -426,7 +360,70 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 }
                               }
                             ],
-                            
+                            content:[
+                              {
+                                type: "text",
+                                text:
+                                  "In this electoral riding, {expression/1in1000} out of 1000 people accessed a food bank this year."
+                              },
+                              {
+                                type: "fields",
+                                fieldInfos: [
+                                  {
+                                    fieldName: "Pop2016",
+                                    label: "Total Population (2016)",
+                                    format: {
+                                      digitSeparator: true,
+                                      places: 0
+                                    }
+                                  },
+                                  {
+                                    fieldName: "Total_visits",
+                                    label: "Total visits to a food bank",
+                                    format: {
+                                        digitSeparator: true,
+                                        places: 0
+                                    }
+                                  },
+                                  {
+                                    fieldName: "UniqueIndividuals_cnt",
+                                    label: "Total unique visits",
+                                    format: {
+                                      digitSeparator: true,
+                                      places: 0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                type: "media", //MediaContentElement for chart
+                                mediaInfos: [
+                                  {
+                                    title: "<b>Housing</b>",
+                                    type: "pie-chart",
+                                    caption: "",
+                                    value: {
+                                      fields: ["Band_Owned", "Emergency_Shelter", "On_the_Street", "Rooming_House", "Own_Home", "Private_Rental", "Social_Housing", "Family_or_Friends", "Youth_Home_Shelter", "Unknown_Housing"],
+                                      normalizeField: null
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                type: "media",
+                                mediaInfos: [
+                                  {
+                                    title: "<b>Primary Source of Income</b>",
+                                    type: "pie-chart",
+                                    caption: "",
+                                    value: {
+                                      fields: ["Canada_Child_Benefit", "Disability_Benefits", "Employment", "Employment_Insurance", "No_Income", "Pension", "Provincial_Disability", "Social_Assistance", "Student_Loan", "Unknown_Income"],
+                                      normalizeField: null
+                                    }
+                                  }
+                                ]
+                              }     
+                            ]                            
 
                           }
                     });
