@@ -201,163 +201,83 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                               //the following sets will ensure that the income and housing field names appear as their designated LABEL in pie chart
                               {
                                 fieldName: "Band_Owned",
-                                label: "Band Owned",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Band Owned"
                               },
                               {
                                 fieldName: "Emergency_Shelter",
-                                label: "Emergency Shelter",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Emergency Shelter"
                               },
                               {
                                 fieldName: "On_the_Street",
-                                label: "On the Street",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "On the Street"
                               },
                               {
                                 fieldName: "Rooming_House",
-                                label: "Rooming House",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Rooming House"
                               },
                               {
                                 fieldName: "Own_Home",
-                                label: "Own Home",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Own Home"
                               },
                               {
                                 fieldName: "Private_Rental",
-                                label: "Private Rental",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Private Rental"
                               },
                               {
                                 fieldName: "Social_Housing",
-                                label: "Social Housing",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Social Housing"
                               },
                               {
                                 fieldName: "Family_or_Friends",
-                                label: "Family or Friends",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Family or Friends"
                               },
                               {
                                 fieldName: "Youth_Home_Shelter",
-                                label: "Youth Home Shelter",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Youth Home Shelter"
                               },
                               {
                                 fieldName: "Unknown_Housing",
-                                label: "Unknown Housing",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Unknown Housing"
                               },
                               {
                                 fieldName: "Canada_Child_Benefit",
-                                label: "Canada Child Benefit",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Canada Child Benefit"
                               },
                               {
                                 fieldName: "Disability_Benefits",
-                                label: "Disability Benefits",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Disability Benefits"
                               },
                               {
                                 fieldName: "Employment",
-                                label: "Employment",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Employment"
                               },
                               {
                                 fieldName: "Employment_Insurance",
-                                label: "Employment Insurance",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Employment Insurance"
                               },
                               {
                                 fieldName: "No_Income",
-                                label: "No Income",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "No Income"
                               },
                               {
                                 fieldName: "Pension",
-                                label: "Pension",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Pension"
                               },
                               {
                                 fieldName: "Provincial_Disability",
-                                label: "Provincial Disability",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Provincial Disability"
                               },
                               {
                                 fieldName: "Social_Assistance",
-                                label: "Social Assistance",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Social Assistance"
                               },
                               {
                                 fieldName: "Student_Loan",
-                                label: "Student Loan",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Student Loan"
                               },
                               {
                                 fieldName: "Unknown_Income",
-                                label: "Unknown Income",
-                                format: {
-                                  digitSeparator: true,
-                                  places: 0
-                                }
+                                label: "Unknown Income"
                               }
                             ],
 
