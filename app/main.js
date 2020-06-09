@@ -453,7 +453,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                         center: [-87, 50],
                         zoom: 5,
                         highlightOptions: {
-                            color: "#00e6e6",
+                            color: "#00AEC7",
                             haloOpacity: 1,
                             fillOpacity: 0
                         }
