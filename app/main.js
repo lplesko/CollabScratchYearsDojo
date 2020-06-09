@@ -202,102 +202,162 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                               {
                                 fieldName: "Band_Owned",
                                 label: "Band Owned",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Emergency_Shelter",
                                 label: "Emergency Shelter",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "On_the_Street",
                                 label: "On the Street",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Rooming_House",
                                 label: "Rooming House",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Own_Home",
                                 label: "Own Home",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Private_Rental",
                                 label: "Private Rental",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Social_Housing",
                                 label: "Social Housing",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Family_or_Friends",
                                 label: "Family or Friends",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Youth_Home_Shelter",
                                 label: "Youth Home Shelter",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Unknown_Housing",
                                 label: "Unknown Housing",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Canada_Child_Benefit",
                                 label: "Canada Child Benefit",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Disability_Benefits",
                                 label: "Disability Benefits",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Employment",
                                 label: "Employment",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Employment_Insurance",
                                 label: "Employment Insurance",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "No_Income",
                                 label: "No Income",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Pension",
                                 label: "Pension",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Provincial_Disability",
                                 label: "Provincial Disability",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Social_Assistance",
                                 label: "Social Assistance",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Student_Loan",
                                 label: "Student Loan",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               },
                               {
                                 fieldName: "Unknown_Income",
                                 label: "Unknown Income",
-                                visible: false
+                                format: {
+                                  digitSeparator: true,
+                                  places: 0
+                                }
                               }
                             ],
                             
