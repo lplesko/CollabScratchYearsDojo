@@ -190,7 +190,13 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                         outFields: ["*"],
                         popupTemplate: {
                             title: "{ENGLISH_NA} | {YearString}",
-                            
+                            expressionInfos: [
+                              {
+                                name: "1in1000",
+                                title: "1in1000 Popup",
+                                expression: "Round((($feature.UniqueIndividuals_perc)*10),1)"
+                              }
+                            ],
                             fieldInfos: [
                               //the following sets will ensure that the income and housing field names appear as their designated LABEL in pie chart
                               {
@@ -357,15 +363,6 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             
                             content:[
                               {
-                                  
-                                expressionInfos: [
-                                  {
-                                    name: "1in1000",
-                                    title: "1in1000 Popup",
-                                    expression: "Round((($feature.UniqueIndividuals_perc)*10),1)"
-                                  }
-                                ],
-                                  
                                 type: "text",
                                 text:
                                   "In this electoral riding, {expression/1in1000} out of 1000 people accessed a food bank this year."
