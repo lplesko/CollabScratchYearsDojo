@@ -432,7 +432,7 @@ import { dummies, years } from "./constants";
       return {
         dummy,
         year, 
-        value: feature.attributes.value
+        value: "$" + feature.attributes.value
       };
     });
     return createDataObjects(responseChartData);
