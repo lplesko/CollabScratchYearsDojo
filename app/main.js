@@ -113,7 +113,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 return {
                                     year: year,
                                     dummy: dummy,
-                                    value: feature.attributes.value
+                                    value: "$" + feature.attributes.value
                                 };
                             });
                             return [2 /*return*/, createDataObjects(responseChartData)];
