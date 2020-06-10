@@ -185,7 +185,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                 case 0:
                     layer = new FeatureLayer({
                         portalItem: {
-                            id: "38c403f3896f427cb491168958162f16"
+                            id: "1a79991cdffd444880a2403dc500bc1c"
                         },
                         outFields: ["*"],
                         popupTemplate: {
@@ -430,7 +430,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                     districtsLayer = new FeatureLayer({
                         title: "districts",
                         portalItem: {
-                            id: "38c403f3896f427cb491168958162f16"
+                            id: "1a79991cdffd444880a2403dc500bc1c"
                         },
                         popupTemplate: null,
                         opacity: 0,
