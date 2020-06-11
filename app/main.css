@@ -7,7 +7,7 @@ body, #viewDiv {
 }
 
 p {
-  margin: 0;
+  margin: 10px 0 0 0;
 }
 
 #chartDiv {
