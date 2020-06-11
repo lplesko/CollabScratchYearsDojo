@@ -464,7 +464,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             layerInfos: [
                                 {
                                     layer: layer,
-                                    title: "Food Bank Usage",
+                                    title: "Food Bank Use by Electoral Riding",
                                 }
                             ]
                         });
