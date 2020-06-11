@@ -478,7 +478,8 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                         view: view,
                         content: document.getElementById("chartDiv"),
                         expandIconClass: "esri-icon-chart",
-                        group: "top-left"
+                        group: "top-left",
+                        expanded: true
                     });
                     view.ui.add(chartExpand, "top-left");
                     view.ui.add("logoDiv", "bottom-left");
