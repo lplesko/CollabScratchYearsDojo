@@ -27,8 +27,8 @@ p {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 45px 60px;
-  grid-template-rows: 40px 40px 40px 40px 40px;
+  grid-template-columns: 50px 60px;
+  grid-template-rows: 35px 40px 40px 40px 40px;
   grid-template-areas: ". col1" "row-label1 canvas" "row-label2 canvas" "row3 canvas" "row4 canvas";
 
   justify-items: stretch;
