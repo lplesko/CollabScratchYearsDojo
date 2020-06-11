@@ -387,7 +387,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                   },
                                   {
                                     fieldName: "UniqueIndividuals_cnt",
-                                    label: "Total unique visits",
+                                    label: "Total unique individuals",
                                     format: {
                                       digitSeparator: true,
                                       places: 0
