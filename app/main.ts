@@ -300,7 +300,7 @@ import { dummies, years } from "./constants";
       layerInfos: [
         {
           layer: layer,
-          title: "Food Bank Usage"
+          title: "Food Bank Use by Electoral Riding"
         }
       ]
     });
