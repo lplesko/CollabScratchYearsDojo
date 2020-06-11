@@ -223,7 +223,7 @@ import { dummies, years } from "./constants";
             },
             {
               fieldName: "UniqueIndividuals_cnt",
-              label: "Total unique visits",
+              label: "Total unique individuals",
               format: {
                 digitSeparator: true,
                 places: 0
