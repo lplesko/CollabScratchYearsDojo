@@ -469,6 +469,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                         });
                     search = new Search({
                         view: view,
+                        zoom: 6
                         locationEnabled: false
                     });
                     return [4 /*yield*/, view.when()];
