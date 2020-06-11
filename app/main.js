@@ -456,17 +456,9 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             color: "#00AEC7",
                             haloOpacity: 1,
                             fillOpacity: 0
-                        },
-                        
-                        popup: {  
-                            dockEnabled: true,
-                            dockOptions: {
-                                buttonEnabled: false,
-                                breakpoint: false
-                            }
                         }
-                        
                     });
+                    
                         legend = new Legend({
                             view: view,
                             layerInfos: [
