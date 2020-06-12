@@ -13,6 +13,8 @@ p {
 #chartDiv {
   padding: 5px;
   background-color: white;
+  overflow-y: auto;
+  max-height: 520px;
 }
 
 #resetBtn {
