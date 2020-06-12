@@ -418,8 +418,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                     caption: "",
                                     value: {
                                       fields: ["Canada_Child_Benefit", "Disability_Benefits", "Employment", "Employment_Insurance", "No_Income", "Pension", "Provincial_Disability", "Social_Assistance", "Student_Loan", "Unknown_Income"],
-                                      normalizeField: null,
-                                      tooltipField: null
+                                      normalizeField: null
                                     }
                                   }
                                 ]
