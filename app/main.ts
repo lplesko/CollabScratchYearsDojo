@@ -319,7 +319,6 @@ import { dummies, years } from "./constants";
     expanded: true
   });
   view.ui.add(chartExpand, "top-left");
-  view.ui.add("logoDiv", "bottom-left");
   view.ui.add(search, "top-right");
   view.ui.add(legend, "bottom-right");
 
