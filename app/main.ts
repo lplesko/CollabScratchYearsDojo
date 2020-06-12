@@ -228,6 +228,14 @@ import { dummies, years } from "./constants";
                 places: 0
               }
             },
+            {
+              fieldName: "UniqueIndividuals_cnt",
+              label: "Total unique individuals",
+              format: {
+                digitSeparator: true,
+                places: 0
+              }
+            },
             {	
               fieldName: "Adults",	
               label: "Total visits (adults)",	
@@ -250,14 +258,6 @@ import { dummies, years } from "./constants";
               format: {
                   digitSeparator: true,
                   places: 0
-              }
-            },
-            {
-              fieldName: "UniqueIndividuals_cnt",
-              label: "Total unique individuals",
-              format: {
-                digitSeparator: true,
-                places: 0
               }
             }
           ]
