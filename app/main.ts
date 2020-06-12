@@ -295,14 +295,18 @@ import { dummies, years } from "./constants";
     }
   });
   
-    const legend = new Legend({
-      view: view,
-      layerInfos: [
-        {
-          layer: layer,
-          title: "Food Bank Use by Electoral Riding"
-        }
-      ]
+    const legend = new Expand({
+        content: new Legend({
+            view: view,
+            layerInfos: [
+                {
+                    layer: layer,
+                    title: "Food Bank Use by Electoral Riding"
+                }
+            ]
+        }),
+        view: view,
+        expanded: true
     });
   
   const search = new Search({
