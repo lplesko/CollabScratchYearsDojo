@@ -311,7 +311,7 @@ import { dummies, years } from "./constants";
 
   const map = new EsriMap({
     basemap: "gray",
-    layers: [ layer, districtsLayer ]
+    layers: [ northernLayer, layer, districtsLayer ]
   });
 
   const view = new MapView({
