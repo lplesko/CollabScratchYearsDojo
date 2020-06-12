@@ -17,7 +17,22 @@ import Search = require("esri/widgets/Search");
 import { dummies, years } from "./constants";
 
 ( async () => {
-
+  const northernLayer = new FeatureLayer({
+      portalItem: {
+          id: "0be94b8c12f646ba840a3b4bb5b20b2e"
+      },
+      outFields: ["*"],
+      popupTemplate: {
+          title: "{ENGLISH_NA}",
+          content:[
+            {
+              type: "text",
+              text:
+                "Northern Statement........"
+            }]
+        }
+  }); 
+  
   const layer = new FeatureLayer({
     portalItem: {
       id: "1a79991cdffd444880a2403dc500bc1c"
@@ -213,6 +228,22 @@ import { dummies, years } from "./constants";
                 places: 0
               }
             },
+            {	
+              fieldName: "Adults",	
+              label: "Total visits (adults)",	
+              format: {	
+                digitSeparator: true,	
+                places: 0	
+              }	
+            },	
+            {	
+              fieldName: "Children",	
+              label: "Total visits (children)",	
+              format: {	
+                digitSeparator: true, 	
+                places: 0	
+              }	
+            },  
             {
               fieldName: "Total_visits",
               label: "Total visits to a food bank",
