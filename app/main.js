@@ -483,7 +483,6 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                         expanded: true
                     });
                     view.ui.add(chartExpand, "top-left");
-                    view.ui.add("logoDiv", "bottom-left");
                     view.ui.add(search, "top-right");
                     view.ui.add(legend, "bottom-right");
                     return [4 /*yield*/, view.whenLayerView(layer)];
