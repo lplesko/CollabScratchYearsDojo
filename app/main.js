@@ -434,7 +434,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                               {
                                 type: "text",
                                 text:
-                                  "<b>PRIMARY HOUSING TYPE<b>"
+                                  "<b>Primary Housing Type:<b>"
                               },
                               {
                                 type: "media", //MediaContentElement for chart
@@ -453,7 +453,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                               {
                                 type: "text",
                                 text:
-                                  "<b>PRIMARY SOURCE OF INCOME<b>"
+                                  "<b>Primary Source of Income:<b>"
                               },  
                               {
                                 type: "media",
