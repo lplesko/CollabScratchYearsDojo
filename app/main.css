@@ -6,10 +6,6 @@ body, #viewDiv {
   width: 100%;
 }
 
-p {
-  margin: 10px 0 0 0;
-}
-
 #chartDiv {
   padding: 5px;
   background-color: white;
