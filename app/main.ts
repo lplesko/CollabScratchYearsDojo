@@ -28,7 +28,7 @@ import { dummies, years } from "./constants";
             {
               type: "text",
               text:
-                "Northern Statement........"
+                "Due to insufficient data, food bank use in the ridings of Kiiwetinoong, Mushkegowuk-James Bay, and Kenora-Rainy River, were not accurately reflected on this map. Northern food insecurity is both complex and a crisis in Ontario and across Canada. Northern food banks do provide service to these remote areas; however, the numbers reported are significantly lower than the number of people served or requiring support."
             }]
         }
   }); 
