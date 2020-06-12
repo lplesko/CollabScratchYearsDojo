@@ -179,30 +179,10 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
             }
             heatmapChart_1.updateGrid(layerStats, layerView, true);
         }
-        var northernLayer, layer, districtsLayer, map, mapList, view, legend, search, chartExpand, northernLayerView, layerView, districtsLayerView, layerStats, highlight, previousId, resetBtn;
+        var layer, districtsLayer, northernLayer, map, mapList, view, legend, search, chartExpand, layerView, districtsLayerView, northernLayerView, layerStats, highlight, previousId, resetBtn;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    northernLayer = new FeatureLayer({
-                        portalItem: {
-                            id: "0be94b8c12f646ba840a3b4bb5b20b2e"
-                        },
-                        outFields: ["*"],
-                        popupTemplate: {
-                            title: "{ENGLISH_NA}",
-                            content:[
-                              {
-                                type: "text",
-                                text:
-                                  "<b>The North:<b>"
-                              },
-                              {
-                                type: "text",
-                                text:
-                                  "Due to insufficient data, food bank use in the ridings of Kiiwetinoong, Mushkegowuk-James Bay, and Kenora-Rainy River, were not accurately reflected on this map. Northern food insecurity is both complex and a crisis in Ontario and across Canada. Northern food banks do provide service to these remote areas; however, the numbers reported are significantly lower than the number of people served or requiring support."
-                              }]
-                          }
-                    }); 
                     layer = new FeatureLayer({
                         portalItem: {
                             id: "1a79991cdffd444880a2403dc500bc1c"
@@ -487,10 +467,30 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             })
                         })
                     });
+                    northernLayer = new FeatureLayer({
+                        portalItem: {
+                            id: "0be94b8c12f646ba840a3b4bb5b20b2e"
+                        },
+                        outFields: ["*"],
+                        popupTemplate: {
+                            title: "{ENGLISH_NA}",
+                            content:[
+                              {
+                                type: "text",
+                                text:
+                                  "<b>The North:<b>"
+                              },
+                              {
+                                type: "text",
+                                text:
+                                  "Due to insufficient data, food bank use in the ridings of Kiiwetinoong, Mushkegowuk-James Bay, and Kenora-Rainy River, were not accurately reflected on this map. Northern food insecurity is both complex and a crisis in Ontario and across Canada. Northern food banks do provide service to these remote areas; however, the numbers reported are significantly lower than the number of people served or requiring support."
+                              }]
+                          }
+                    }); 
                     
                     map = new EsriMap({
                         basemap: "gray",
-                        layers: [northernLayer, layer, districtsLayer]
+                        layers: [layer, districtsLayer, northernLayer]
                     });
 
                     view = new MapView({
