@@ -418,7 +418,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                   },  
                                   {
                                     fieldName: "Total_visits",
-                                    label: "Total visits (adults + children)",
+                                    label: "Total Visits (Adults + Children)",
                                     format: {
                                         digitSeparator: true,
                                         places: 0
