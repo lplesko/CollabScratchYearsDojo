@@ -222,7 +222,7 @@ import { dummies, years } from "./constants";
           fieldInfos: [
             {
               fieldName: "Pop2016",
-              label: "Total Population (2016)",
+              label: "Population of Riding (2016)",
               format: {
                 digitSeparator: true,
                 places: 0
@@ -230,7 +230,7 @@ import { dummies, years } from "./constants";
             },
             {
               fieldName: "UniqueIndividuals_cnt",
-              label: "Total unique individuals",
+              label: "Total Unique Individuals",
               format: {
                 digitSeparator: true,
                 places: 0
@@ -238,7 +238,7 @@ import { dummies, years } from "./constants";
             },
             {	
               fieldName: "Adults",	
-              label: "Total visits (adults)",	
+              label: "Visits by Adults",	
               format: {	
                 digitSeparator: true,	
                 places: 0	
@@ -246,7 +246,7 @@ import { dummies, years } from "./constants";
             },	
             {	
               fieldName: "Children",	
-              label: "Total visits (children)",	
+              label: "Visits by Children",	
               format: {	
                 digitSeparator: true, 	
                 places: 0	
@@ -254,7 +254,7 @@ import { dummies, years } from "./constants";
             },  
             {
               fieldName: "Total_visits",
-              label: "Total visits (adults + children)",
+              label: "Total Visits (Adults + Children)",
               format: {
                   digitSeparator: true,
                   places: 0
