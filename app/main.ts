@@ -17,26 +17,6 @@ import Search = require("esri/widgets/Search");
 import { dummies, years } from "./constants";
 
 ( async () => {
-  const northernLayer = new FeatureLayer({
-      portalItem: {
-          id: "0be94b8c12f646ba840a3b4bb5b20b2e"
-      },
-      outFields: ["*"],
-      popupTemplate: {
-          title: "{ENGLISH_NA}",
-          content:[
-            {
-              type: "text",
-              text:
-                "<b>The North:<b>"
-            },
-            {
-              type: "text",
-              text:
-                "Due to insufficient data, food bank use in the ridings of Kiiwetinoong, Mushkegowuk-James Bay, and Kenora-Rainy River, were not accurately reflected on this map. Northern food insecurity is both complex and a crisis in Ontario and across Canada. Northern food banks do provide service to these remote areas; however, the numbers reported are significantly lower than the number of people served or requiring support."
-            }]
-        }
-  }); 
   
   const layer = new FeatureLayer({
     portalItem: {
@@ -323,10 +303,31 @@ import { dummies, years } from "./constants";
       })
     })
   });
+  
+  const northernLayer = new FeatureLayer({
+    portalItem: {
+        id: "0be94b8c12f646ba840a3b4bb5b20b2e"
+    },
+    outFields: ["*"],
+    popupTemplate: {
+        title: "{ENGLISH_NA}",
+        content:[
+          {
+            type: "text",
+            text:
+              "<b>The North:<b>"
+          },
+          {
+            type: "text",
+            text:
+              "Due to insufficient data, food bank use in the ridings of Kiiwetinoong, Mushkegowuk-James Bay, and Kenora-Rainy River, were not accurately reflected on this map. Northern food insecurity is both complex and a crisis in Ontario and across Canada. Northern food banks do provide service to these remote areas; however, the numbers reported are significantly lower than the number of people served or requiring support."
+          }]
+      }
+  }); 
 
   const map = new EsriMap({
     basemap: "gray",
-    layers: [ northernLayer, layer, districtsLayer ]
+    layers: [ layer, districtsLayer, northernLayer ]
   });
 
   const view = new MapView({
