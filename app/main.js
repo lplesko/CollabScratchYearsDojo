@@ -179,10 +179,25 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
             }
             heatmapChart_1.updateGrid(layerStats, layerView, true);
         }
-        var layer, districtsLayer, map, mapList, view, legend, search, chartExpand, layerView, districtsLayerView, layerStats, highlight, previousId, resetBtn;
+        var northernLayer, layer, districtsLayer, map, mapList, view, legend, search, chartExpand, northernLayerView, layerView, districtsLayerView, layerStats, highlight, previousId, resetBtn;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    northernLayer = new FeatureLayer({
+                        portalItem: {
+                            id: "0be94b8c12f646ba840a3b4bb5b20b2e"
+                        },
+                        outFields: ["*"],
+                        popupTemplate: {
+                            title: "{ENGLISH_NA}",
+                            content:[
+                              {
+                                type: "text",
+                                text:
+                                  "Northern Statement........"
+                              }]
+                          }
+                    }); 
                     layer = new FeatureLayer({
                         portalItem: {
                             id: "1a79991cdffd444880a2403dc500bc1c"
@@ -460,7 +475,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                     
                     map = new EsriMap({
                         basemap: "gray",
-                        layers: [layer, districtsLayer]
+                        layers: [northernLayer, layer, districtsLayer]
                     });
 
                     view = new MapView({
