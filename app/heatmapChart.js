@@ -47,7 +47,6 @@ define(["require", "exports", "esri/views/layers/support/FeatureFilter", "esri/C
             // Draw text
             ctx.fillStyle = "white";
             ctx.strokeStyle = "#72246C";
-            ctx.digitSeparator = true;
             // ctx.fill
             ctx.lineWidth = 4;
             ctx.textBaseline = "middle";
