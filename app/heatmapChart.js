@@ -58,7 +58,7 @@ define(["require", "exports", "esri/views/layers/support/FeatureFilter", "esri/C
         // draw highlighted cell
         if (highlighted) {
             var w = 3 * pixelRatio;
-            ctx.strokeStyle = "rgba(50,50,50,1)";
+            ctx.strokeStyle = "#00AEC7";
             ctx.lineWidth = w;
             ctx.strokeRect(highlighted.col * cellWidth + w / 2, highlighted.row * cellHeight + w / 2, cellWidth - w, cellHeight - w);
         }
