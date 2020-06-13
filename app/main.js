@@ -160,7 +160,16 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             ],
                             fieldInfos: [
                               //the following sets will ensure that the income and housing field names appear as their designated LABEL in pie chart
-                              {
+                              //the first in the list is for the newly generated statistic for the value that goes in the grid  
+                                {
+                                  fieldName: "value",
+                                  label: "value",
+                                  format: {
+                                    digitSeparator: true,
+                                    places: 0
+                                  }
+                                },
+                                {
                                 fieldName: "Band_Owned",
                                 label: "Band Owned",
                                 format: {
