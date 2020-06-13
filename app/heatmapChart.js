@@ -47,11 +47,11 @@ define(["require", "exports", "esri/views/layers/support/FeatureFilter", "esri/C
             // Draw text
             ctx.fillStyle = "white";
             ctx.strokeStyle = "#72246C";
+            ctx.digitSeparator = true;
             // ctx.fill
             ctx.lineWidth = 4;
             ctx.textBaseline = "middle";
             ctx.font = 12 * pixelRatio + "px \"Avenir Next W00\",\"Helvetica Neue\",Helvetica,Arial,sans-serif";
-            ctx.digitSeparator = true;
             ctx.textAlign = "center";
             ctx.strokeText("" + value, col * cellWidth + cellWidth / 2, row * cellHeight + cellHeight / 2);
             ctx.fillText("" + value, col * cellWidth + cellWidth / 2, row * cellHeight + cellHeight / 2);
