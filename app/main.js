@@ -421,7 +421,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 mediaInfos: [
                                   {
                                     title: null,
-                                    type: "pie-chart",
+                                    type: "column-chart",
                                     caption: "",
                                     value: {
                                       fields: ["Band_Owned", "Emergency_Shelter", "On_the_Street", "Rooming_House", "Own_Home", "Private_Rental", "Social_Housing", "Family_or_Friends", "Youth_Home_Shelter", "Unknown_Housing"],
@@ -440,7 +440,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                                 mediaInfos: [
                                   {
                                     title: null,
-                                    type: "pie-chart",
+                                    type: "bar-chart",
                                     caption: "",
                                     value: {
                                       fields: ["Canada_Child_Benefit", "Disability_Benefits", "Employment", "Employment_Insurance", "No_Income", "Pension", "Provincial_Disability", "Social_Assistance", "Student_Loan", "Unknown_Income"],
