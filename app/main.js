@@ -140,7 +140,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
             }
             heatmapChart_1.updateGrid(layerStats, layerView, true);
         }
-        var layer, districtsLayer, northernLayer, map, mapList, view, legend, search, chartExpand, layerView, districtsLayerView, northernLayerView, layerStats, highlight, previousId, resetBtn;
+        var layer, northernLayer, map, mapList, view, legend, search, chartExpand, layerView, northernLayerView, layerStats, highlight, previousId, resetBtn;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -414,20 +414,6 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
 
                           }
                     });
-                    districtsLayer = new FeatureLayer({
-                        title: "districts",
-                        portalItem: {
-                            id: "1a79991cdffd444880a2403dc500bc1c"
-                        },
-                        popupTemplate: null,
-                        opacity: 0,
-                        renderer: new renderers_1.SimpleRenderer({
-                            symbol: new symbols_1.SimpleFillSymbol({
-                                color: [0, 0, 0, 1],
-                                outline: null
-                            })
-                        })
-                    });
                     northernLayer = new FeatureLayer({
                         portalItem: {
                             id: "0be94b8c12f646ba840a3b4bb5b20b2e"
@@ -451,7 +437,7 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                     
                     map = new EsriMap({
                         basemap: "gray",
-                        layers: [layer, districtsLayer, northernLayer]
+                        layers: [layer, northernLayer]
                     });
 
                     view = new MapView({
@@ -498,12 +484,6 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                     view.ui.add(legend, "bottom-right");
                     return [4 /*yield*/, view.whenLayerView(layer)];
                 case 2:
-                    layerView = _a.sent();
-                    return[4 /*yield*/, view.whenLayerView(districtsLayer)];
-                case 3:
-                    districtsLayerView = _a.sent();
-                    return [4 /*yield*/, queryLayerStatistics(layer)];
-                case 4:
                     layerStats = _a.sent();
                     heatmapChart_1.updateGrid(layerStats, layerView);
                     chartExpand.watch("expanded", resetOnCollapse);
