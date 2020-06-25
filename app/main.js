@@ -456,6 +456,11 @@ define(["require", "exports", "esri/Map", "esri/views/MapView", "esri/layers/Fea
                             color: "#00AEC7",
                             haloOpacity: 1,
                             fillOpacity: 0
+                        },
+                        popup: {
+                            visibleElements: {
+                                featureNavigation: false
+                            }
                         }
                     });
                     
